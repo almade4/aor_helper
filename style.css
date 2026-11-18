@@ -431,9 +431,13 @@ footer {
 
 /
 1
+
+
 ~
 3턴
+
  
+
 추천 빌드 /
 
 .turns-content {
@@ -961,4 +965,23 @@ body {
 		grid-template-columns: 48px minmax(0, 1fr) 48px;
 		gap: 8px;
 	}
+}
+
+/* 지배 지역 수 증감 버튼 비활성화 */
+#territoryDecrease:disabled, #territoryIncrease:disabled {
+	opacity: 0.3 !important;
+	cursor: not-allowed !important;
+	pointer-events: none !important;
+	box-shadow: none !important;
+	transform: none !important;
+	filter: grayscale(100%);
+}
+
+/* 비활성화 버튼의 터치 및 클릭 연출 제거 */
+#territoryDecrease:disabled:hover, #territoryDecrease:disabled:active,
+	#territoryDecrease:disabled:focus, #territoryIncrease:disabled:hover,
+	#territoryIncrease:disabled:active, #territoryIncrease:disabled:focus {
+	transform: none !important;
+	box-shadow: none !important;
+	filter: grayscale(100%) !important;
 }
